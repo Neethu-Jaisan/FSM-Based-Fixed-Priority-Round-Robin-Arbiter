@@ -1,29 +1,25 @@
-# Project Title 🚀
-A short description of what this project does and why it exists.
+# Hybrid Fixed-Priority + Round Robin Arbiter (FPGA Implementation)
+
+This project implements a **Hybrid Arbiter** that supports:
+- **Fixed Priority Arbitration** (when `prior = 1`)
+- **Round Robin Arbitration** (when `prior = 0`)
+
+It is fully designed in **Verilog HDL**, simulated in **Vivado**, and implemented on the **Basys3 FPGA (Artix-7)** board.
 
 ---
 
-## 📌 Features
-- Brief point about what your project implements  
-- Another key feature  
-- Any extra highlights (low power, optimized RTL, UVM testbench, etc.)
+## 🚀 Features
+- 4-requester arbiter (`req[3:0]`)
+- 4 grant outputs (`grant[3:0]`)
+- FSM-based Round Robin scheduling
+- Fixed-priority override mode using a control signal
+- Debounced reset + clock divider for Basys3
+- Synthesizable and FPGA-ready design
+- Verified using post-synthesis timing simulation
 
 ---
 
-## 🛠️ Tech Stack
-- **HDL / Language:** Verilog / SystemVerilog / VHDL / Python / Perl  
-- **Tools Used:** ModelSim, Vivado, Cadence, Synopsys, etc.  
-- **Platform:** FPGA board / Simulation-only / ASIC flow
+## 📌 Modes of Operation
 
----
-
-## 📝 Project Description
-Write a short, clear explanation of:
-- What problem the project solves  
-- Your design approach  
-- Any architectural decisions  
-- Key outcomes or improvements  
-
----
-
-## 📂 Folder Structure
+### **1. Fixed Priority Mode (`prior = 1`)**
+Priority order:
