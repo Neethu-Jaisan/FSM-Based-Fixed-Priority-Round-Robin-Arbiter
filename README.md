@@ -10,7 +10,7 @@ The design is modeled as a **Finite State Machine (FSM), simulated using Vivado*
 ![Fixed Priority Scheduling Algorithm](Fixed_Priority_Scheduling_Algorithm.png)
 
 ## Round Robin FSM
-![Round Robin FSM](round robin fsm.png.png)
+![Round Robin FSM](round robin fsm.png)
 
 ## Simulation Waveform
 ![Simulation Waveform](wave.png)
